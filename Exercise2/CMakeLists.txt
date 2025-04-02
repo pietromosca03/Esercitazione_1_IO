@@ -36,7 +36,7 @@ list(APPEND MeanValue_LINKED_LIBRARIES PRIVATE GTest::gmock_main)
 
 # Create executable
 ################################################################################
-add_executable(${PROJECT_NAME}
+add_executable(${Exercise2}
     main.cpp
     ${MeanValue_SOURCES}
     ${MeanValue_HEADERS})
@@ -44,6 +44,6 @@ add_executable(${PROJECT_NAME}
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/data.txt
      DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
-target_link_libraries(${PROJECT_NAME} ${MeanValue_LINKED_LIBRARIES})
-target_include_directories(${PROJECT_NAME} PRIVATE ${MeanValue_INCLUDE})
-target_compile_options(${PROJECT_NAME} PUBLIC -fPIC)
+target_link_libraries(${Exercise2} ${MeanValue_LINKED_LIBRARIES})
+target_include_directories(${Exercise2} PRIVATE ${MeanValue_INCLUDE})
+target_compile_options(${Exercise2} PUBLIC -fPIC)
